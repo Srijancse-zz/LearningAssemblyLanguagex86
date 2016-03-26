@@ -2,14 +2,14 @@ extern printf
 extern scanf
 
 section .data
-    inp   :    db "%d"                  ; input format for scanf
-    a     :    dd 0                     ; first number
-    b     :    dd 1                     ; second number
-    c     :    dd 0                     ; sum of a and b
-    n     :    dd 0                     ; Nth number
-    i     :    dd 1                     ; Counter
-    out   :    db "%d", 10, 0           ; Output format
-    prompt:    db "Enter number n: ", 0 ; prompt to enter input
+    inp   :    db "%d"                  
+    a     :    dd 0                     
+    b     :    dd 1                     
+    c     :    dd 0                     
+    n     :    dd 0                     
+    i     :    dd 1                     
+    out   :    db "%d", 10, 0          
+    prompt:    db "Enter number n: ", 0 
 
 section .text
     global main
@@ -26,7 +26,7 @@ section .text
         push inp                        
         call scanf                      
         add esp, 8
-	add DWORD [n], -1
+	    add DWORD [n], -1
 
         fibo:
 
